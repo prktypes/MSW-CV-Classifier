@@ -1,0 +1,35 @@
+Install instructions (Windows) - ultralytics (YOLOv8) and labelImg
+
+1) Create/use a Python 3.8-3.11 virtual environment (recommended)
+
+PowerShell:
+    python -m venv .venv
+    .\.venv\Scripts\Activate.ps1
+
+2) Upgrade pip
+    python -m pip install -U pip setuptools wheel
+
+3) Install ultralytics (YOLOv8)
+    pip install ultralytics
+
+4) (Optional) If you want GPU support on Windows, install the matching tensorflow or torch with CUDA
+   - ultralytics uses PyTorch. Follow PyTorch install guide: https://pytorch.org/get-started/locally/
+   - Example for CUDA 11.8 (adjust to your GPU):
+       pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+5) Install labelImg (annotation tool)
+   - Using pip (Qt5 backend):
+       pip install labelImg
+       # then run
+       labelImg
+   - Alternatively, download the Windows exe from labelImg releases and run the installer.
+
+6) Helpful dev tools
+    pip install pillow tqdm opencv-python
+
+7) Test installation: in Python REPL or PowerShell
+    python -c "from ultralytics import YOLO; print('ultralytics OK')"
+
+Notes:
+- If you hit permission or PATH issues, run PowerShell as Administrator when installing system-level dependencies.
+- GPU setup varies by driver/OS; consult PyTorch docs for exact CUDA+driver versions.

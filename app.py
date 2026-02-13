@@ -3,7 +3,7 @@ import streamlit as st
 import helper
 import settings
 
-st.set_page_config(
+st.set_page_config( 
     page_title="Waste Detection",
 )
 

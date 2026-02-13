@@ -1,0 +1,9 @@
+# YOLOv8 data config (Windows-friendly relative paths)
+# Update paths below if your project layout differs.
+
+path: .  # project root where this file lives
+train: dataset\images\train
+val:   dataset\images\val
+
+nc: 6
+names: ["cardboard", "glass", "metal", "paper", "plastic", "trash"]
